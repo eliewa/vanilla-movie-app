@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="/dist/output.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600;900&family=Poppins&family=Zen+Dots&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/50c78812bc.js" crossorigin="anonymous"></script>
+  <script src="./assets/js/script.js" defer></script>
+  <title>Document</title>
+</head>
+<body>
+  <header class="bg-tmdbDarkBlue font-heading">
+    <nav class="mx-auto text-white text-lg flex justify-between lg:container h-[70px] items-center">
+      <div>
+        <ul class="flex items-center gap-7">
+          <li><i class="fa-solid fa-bars text-3xl md:invisible p-5" id="menu-btn"></i></li>
+          <ul class="bg-tmdbDarkBlue p-10 absolute top-[75px] rounded-lg " style="display: none;" id="menu">
+            <i class="fa-solid fa-xmark"></i>
+            <li>Movies</li>
+            <li>TV Shows</li>
+            <li>People</li>
+            <li>More</li>
+          </ul>
+          <li><img src="./assets/images/logo-white.svg" alt="" ></li>
+          <div class="gap-4 relative right-24 hidden md:flex">
+            <li>Movies</li>
+            <li>TV Shows</li>
+            <li>People</li>
+            <li>More</li>
+          </div>
+          
+        </ul>
+      </div>
+      <div>
+        <ul class="flex items-center gap-4 px-5">
+          <li class="hidden md:block"><i class="fa-solid fa-plus text-2xl"></i></li>
+          <li class="hidden md:block">EN</li>
+          <li class="hidden md:block">Login</li>
+          <li class="hidden md:block">Join TMDB</li>
+          <li><i class="fa-solid fa-magnifying-glass text-2xl text-tmdbLightBlue"></i></li>
+          
+
+        </ul>
+        
+      </div>
+      
+    </nav>
+  </header>
+</body>
+</html>
