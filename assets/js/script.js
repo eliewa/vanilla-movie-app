@@ -12,15 +12,15 @@ const SEARCH_URL = "https://api.themoviedb.org/3/search/movie?api_key=15e383204c
 const form = document.getElementById('form');
 const search = document.getElementById('search');
 const main = document.getElementById('main');
+const topRated = document.getElementById('top-rated');
+const popular = document.getElementById('popular');
 
-
-getMovies(API_URL_POPULAR);
+getMovies(API_URL_POPULAR)
 
  async function getMovies(url){
   const response = await fetch(url);
   const data = await response.json();
   displayMovies(data.results);
-  console.log(data.results);
 }
 
 const displayMovies = movies => {
@@ -31,10 +31,10 @@ const displayMovies = movies => {
     moviesElement.classList.add('movie');
     moviesElement.innerHTML= `
     <img src="${IMAGE_PATH + poster_path}" alt="${title}" class="w-[150px] h-[225px] shadow-sm rounded-md object-cover"/>
-    <div class="movie-info flex flex-col px-3 w-[150px] ">
-      <h3>${title}</h3>
+    <div class="movie-info flex flex-col px-3 w-[150px] pb-4">
+      <h3 class="font-bold py-1">${title}</h3>
       <span class="font-bold w-[40px] text-center rounded-lg ${getClassesByRating(vote_average)}">${vote_average}</span>
-      <p>${release_date}</p>
+      <p class="py-1">${release_date}</p>
     </div>
     `
 
