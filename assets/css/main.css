@@ -3,3 +3,17 @@
 @tailwind utilities;
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600;900&family=Poppins&family=Zen+Dots&display=swap');
+
+::-webkit-scrollbar {
+  height: 10px;
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb{
+  background: rgb(219,219,219);
+  border-radius: 30px;
+}
