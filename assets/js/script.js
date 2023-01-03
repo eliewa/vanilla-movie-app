@@ -18,6 +18,8 @@ const trending = document.getElementById('trending');
 const movieLink = document.getElementById('link');
 const details = document.getElementById('details');
 const box = document.getElementById('box');
+const body = document.getElementById('happy');
+
 
 getMovies(API_URL_POPULAR, main);
 getMovies(API_URL_TOP_RATED, top_rated);
@@ -59,7 +61,7 @@ const displayMovies = (movies, id) => {
       if(details.style.display === 'none') {
         details.style.display = 'flex';
         box.style.display = 'flex';
-        box.style.backgroundImage = `linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(${IMAGE_PATH + poster_path})`
+        box.style.backgroundImage = `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(${IMAGE_PATH + poster_path})`
         box.style.backgroundSize = 'cover';
         box.style.backgroundPosition = 'center';
         details.innerHTML = `
@@ -81,6 +83,14 @@ const displayMovies = (movies, id) => {
         details.style.display = 'none';
         box.style.display = 'none';
     });
+
+    // body.addEventListener('click', (event) => {
+    //   event.preventDefault()
+    //   if (details.style.display === 'flex') {
+    //     details.style.display = 'none';
+    //     box.style.display = 'none';
+    //   }   
+    // });
 
 
   })
