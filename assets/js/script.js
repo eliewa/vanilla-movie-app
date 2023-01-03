@@ -15,6 +15,9 @@ const search = document.getElementById('search');
 const main = document.getElementById('main');
 const top_rated = document.getElementById('top');
 const trending = document.getElementById('trending');
+const movieLink = document.getElementById('link');
+const details = document.getElementById('details');
+const box = document.getElementById('box');
 
 getMovies(API_URL_POPULAR, main);
 getMovies(API_URL_TOP_RATED, top_rated);
@@ -35,9 +38,10 @@ getMovies(API_URL_TRENDING, trending);
 const displayMovies = (movies, id) => {
   id.innerHTML = '';
   movies.forEach((movie) => {
-    const {title, poster_path, vote_average, release_date} = movie;
+    const {title, poster_path, vote_average, release_date, overview} = movie;
     // const API_URL_RECOMMENDATIONS = `https://api.themoviedb.org/3/movie/${movie.movie_id}/recommendations?api_key=15e383204c1b8a09dbfaaa4c01ed7e17&language=en-US&page=1`;
     const moviesElement= document.createElement('div');
+    const toggle = document.getElementById('toggle');
     moviesElement.classList.add('movie');
     moviesElement.innerHTML= `
     <img src="${IMAGE_PATH + poster_path}" alt="${title}" class="w-[150px] h-[225px] shadow-sm rounded-md object-cover"/>
@@ -49,6 +53,34 @@ const displayMovies = (movies, id) => {
     `
 
     id.appendChild(moviesElement);
+
+    moviesElement.addEventListener('click', (event) => {
+      event.preventDefault();
+      if(details.style.display === 'none') {
+        details.style.display = 'flex';
+        box.style.display = 'flex';
+        box.style.backgroundImage = `linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(${IMAGE_PATH + poster_path})`
+        box.style.backgroundSize = 'cover';
+        box.style.backgroundPosition = 'center';
+        details.innerHTML = `
+        <h3 class= "font-bold text-2xl mx-auto text-center pb-5" >${title}</h3>
+        <img src="${IMAGE_PATH + poster_path}" class="self-center object-cover object-center h-auto w-[200px]"/>
+        <p class="font-bold text-xl pt-4">Overview</p>
+        ${overview}
+        `
+      } else {
+        details.style.display = 'none';
+        box.style.display = 'none';
+      }
+    });
+
+    toggle.addEventListener('click', (event) => {
+      event.preventDefault();
+        details.style.display = 'none';
+        box.style.display = 'none';
+    });
+
+
   })
 }
 
