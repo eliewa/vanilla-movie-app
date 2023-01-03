@@ -65,8 +65,10 @@ const displayMovies = (movies, id) => {
         details.innerHTML = `
         <h3 class= "font-bold text-2xl mx-auto text-center pb-5" >${title}</h3>
         <img src="${IMAGE_PATH + poster_path}" class="self-center object-cover object-center h-auto w-[200px]"/>
-        <p class="font-bold text-xl pt-4">Overview</p>
+        <div class= "mt-4 p-5 rounded-lg" style="background-color: rgba(0,0,0,0.5)">
+        <p class="font-bold text-xl">Overview</p>
         ${overview}
+        </div>
         `
       } else {
         details.style.display = 'none';
