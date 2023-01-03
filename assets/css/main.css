@@ -17,3 +17,7 @@
   background: rgb(219,219,219);
   border-radius: 30px;
 }
+
+.hover-action:hover {
+  color: rgb(1, 180, 228);
+}

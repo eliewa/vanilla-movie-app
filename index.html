@@ -27,7 +27,7 @@
           <ul class="flex items-center gap-7">
             <li>
               <i
-                class="fa-solid fa-bars text-3xl md:invisible p-5"
+                class="fa-solid fa-bars text-3xl md:invisible p-5 hover-action"
                 id="menu-btn"
               ></i>
             </li>
@@ -37,19 +37,20 @@
               id="menu"
             >
               <i
-                class="fa-solid fa-xmark relative left-20 bottom-7"
+                class="fa-solid fa-xmark relative left-20 bottom-7 hover-action"
                 id="exit"
               ></i>
-              <li>Movies</li>
-              <li>TV Shows</li>
-              <li>People</li>
+              <a href="./index.html"><li class="pb-2 hover-action">Movies</li></a>
+              
+              <li class="pb-2 hover-action">TV Shows</li>
+              <li class="pb-2 hover-action">People</li>
               <li>More</li>
             </ul>
-            <li><img src="./assets/images/logo-white.svg" alt="" /></li>
+            <li><img src="./assets/images/logo-white.svg" alt="" class="min-w-[300px]"/></li>
             <div class="gap-6 relative right-24 hidden md:flex">
-              <li>Movies</li>
-              <li>TV Shows</li>
-              <li>People</li>
+              <a href="/index.html"><li class="hover-action">Movies</li></a> 
+              <li class="hover-action">TV Shows</li>
+              <li class="hover-action">People</li>
             </div>
           </ul>
         </div>
@@ -62,7 +63,7 @@
             <li class="hidden lg:block">Login</li>
             <li>
               <i
-                class="fa-solid fa-magnifying-glass text-2xl"
+                class="fa-solid fa-magnifying-glass text-2xl hidden md:block"
                 style="color: rgb(1, 180, 228)"
               ></i>
             </li>
@@ -114,15 +115,45 @@
       </div>
     </section>
 
-    <section id="popular" class="w-[80%] mx-auto pt-7">
+    <section class="popular w-[80%] mx-auto pt-7">
       <h1 class="text-3xl font-heading font-semibold" id="category">What's Popular</h1>
       <article id="main" class="mt-7 flex gap-2 pl-5 overflow-x-auto">
       </article>
     </section>
-    <section id="top-rated" class="w-[80%] mx-auto pt-7">
+
+    <section class="top-rated w-[80%] mx-auto pt-7">
       <h1 class="text-3xl font-heading font-semibold" id="category">Top Rated</h1>
       <article id="top" class="mt-7 flex gap-2 pl-5 overflow-x-auto">
       </article>
     </section>
+
+    <section class="trending w-[80%] mx-auto rounded-lg p-7 mt-7 text-white" style="background-image: linear-gradient(
+      rgba(13, 37, 63, 0.61),
+      rgba(13, 37, 63, 0.603)
+    ),
+    url(./assets/images/trending-img.jpg);
+  height: 50vh;
+  background-position: center;
+  background-size: cover;">
+      <h1 class="text-3xl font-heading font-semibold" id="category">Trending Now</h1>
+      <article id="trending" class="mt-7 flex gap-2 pl-5 overflow-x-auto">
+      </article>
+    </section>
+
+    <div>
+      <footer class="text-white font-heading text-lg mt-20" style="background-color: rgb(13, 37, 63);" >
+        <div class="p-4 text-center border-b border-gray-200">
+          <img src="./assets/images/logo-white.svg" alt="" class="min-w-[300px] mx-auto relative left-[30px]"/>
+          <ul class="text-center flex md:flex-row flex-col gap-10 justify-center">
+            <a href="./index.html"><li class="hover-action">Movies</li></a>
+            
+            <li class="hover-action">TV Shows</li>
+            <li class="hover-action">People</li>
+          </ul>
+        </div>
+  
+        <p class="text-center p-5 text">&copy; 2023 Movie.PI inc.</p>
+      </footer>
+    </div>
   </body>
 </html>
