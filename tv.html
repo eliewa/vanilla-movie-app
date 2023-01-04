@@ -14,9 +14,9 @@
       src="https://kit.fontawesome.com/50c78812bc.js"
       crossorigin="anonymous"
     ></script>
-    <script src="./assets/js/script.js" defer></script>
+    <script src="./assets/js/tv-script.js" defer></script>
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>Home</title>
+    <title>TV Shows</title>
   </head>
   <body>
     <header class="font-heading pt-2" style="background-color: rgb(13, 37, 63)">
@@ -71,83 +71,38 @@
       </nav>
     </header>
 
-    <section
-      class="banner lg:w-[80%] mx-auto w-[100%] text-white font-sans font-bold text-3xl flex flex-col justify-center"
-      style="
-        background-image: linear-gradient(
-            rgba(13, 37, 63, 0.61),
-            rgba(13, 37, 63, 0.603)
-          ),
-          url(./assets/images/hero.jpg);
-        height: 50vh;
-        background-position: center;
-        background-size: cover;
-      "
-    >
-      <div class="mx-auto lg:w-[60%] w-[80%]">
-        <h1 class="text-4xl">Welcome.</h1>
-        <h2>
-          Millions of movies, TV shows and people to discover. Explore now.
-        </h2>
-        <form class="text-base font-normal flex flex-col md:block" id="form">
-          <input
-            type="search"
-            name="search"
-            id="search"
-            placeholder="Search for a movie title...."
-            class="w-[80%] rounded-md p-2 mt-3 text-black truncate"
-          />
-          <button
-          type="submit"
-            class="font-bold rounded-md p-2 w-[100px] mt-4 md:mt-0 hover:text-blue-900"
-            style="
-              background: linear-gradient(
-                to right,
-                rgb(30, 213, 169),
-                rgb(1, 180, 228)
-              );
-            "
-          >
-            Search
-        </form>
-        </div>
+    <main>
+
+      <div id="box" class="hidden sm:h-auto md:left-[30%] sm:top-[100px] sm:w-[500px] fixed h-[120vh] w-auto bg-white border-2 left-[30px] top-[0] font-sans leading-6 p-7 rounded-md text-white z-20">
+        <i
+          class="fa-solid fa-xmark relative hover-action text-xl"
+          id="toggle"
+        ></i>
+        <section id="details" class="hidden flex-col">
+        
+        </section>
       </div>
-    </section>
-
-    <div id="box" class="hidden sm:h-auto md:left-[30%] sm:top-[100px] sm:w-[500px] fixed h-[120vh] w-auto bg-white border-2 left-[30px] top-[0] font-sans leading-6 p-7 rounded-md text-white z-20">
-      <i
-        class="fa-solid fa-xmark relative hover-action text-xl"
-        id="toggle"
-      ></i>
-      <section id="details" class="hidden flex-col">
       
+      <section class="sm:w-[80%] w-[100%] mx-auto pt-10">
+        <div class="pl-5 flex sm:flex-row flex-col gap-7 font-sans font-semibold">
+          <h1 class="text-3xl font-heading" id="category">What's Popular</h1>
+          <div class="flex gap-5 text-lg">
+            <button id="popular" class="rounded-lg p-1" style="background-color: rgb(13 37 63) ; color: rgb(30,213,169)">Popular</button>
+            <button id="on-tv">On TV</button>
+            <button id="top-rated">Top Rated</button>
+          </div>
+          
+        </div>
+        
+        <article id="main" class="mt-7 flex gap-2 pl-5 flex-wrap">
+        </article>
+        
       </section>
-    </div>
-    
-
-    <section class="popular sm:w-[80%] w-[100%] mx-auto pt-7">
-      <h1 class="text-3xl font-heading font-semibold pl-5" id="category">What's Popular</h1>
-      <article id="main" class="mt-7 flex gap-2 pl-5 overflow-x-auto">
-      </article>
-    </section>
-
-    <section class="top-rated sm:w-[80%] w-[100%] mx-auto pt-7">
-      <h1 class="text-3xl font-heading font-semibold pl-5" id="category">Top Rated</h1>
-      <article id="top" class="mt-7 flex gap-2 pl-5 overflow-x-auto">
-      </article>
-    </section>
-
-    <section class="trending sm:w-[80%] w-[100%] mx-auto rounded-lg p-7 mt-7 text-white h-[80vh] sm:h-[60vh]" style="background-image: linear-gradient(
-      rgba(13, 37, 63, 0.61),
-      rgba(13, 37, 63, 0.603)
-    ),
-    url(./assets/images/trending-img.jpg);
-  background-position: center;
-  background-size: cover;">
-      <h1 class="text-3xl font-heading font-semibold pl-5" id="category">Trending Now</h1>
-      <article id="trending" class="mt-7 flex gap-2 pl-5 overflow-x-auto">
-      </article>
-    </section>
+      <div class="hover:text-black text-center mx-auto w-[80%] sm:w-[40%] p-3 rounded-lg font-bold font-heading text-white text-xl" style="background-color: rgb(1,180,228);">
+        <button id="load" class="" >Load More</button>
+      </div>
+      
+    </main>
 
     <div>
       <footer class="text-white font-heading text-lg mt-20" style="background-color: rgb(13, 37, 63);" >
