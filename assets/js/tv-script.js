@@ -39,14 +39,16 @@ onTV.addEventListener('click', event => {
   event.preventDefault();
   onTV.style.backgroundColor = "rgb(13, 37, 63)"
   onTV.style.color = 'rgb(30,213,169)'
-  onTV.classList.add("rounded-lg")
-  onTV.classList.add("p-1")
+  onTV.classList.add("rounded-2xl")
+  onTV.classList.add("px-2")
+
 
   popular.style.backgroundColor = "white"
   popular.style.color = 'black'
 
   topRated.style.backgroundColor = "white"
   topRated.style.color = 'black'
+  topRated.classList.add("rounded-2xl")
 
   category.innerHTML = 'Currently Airing'
   
@@ -57,8 +59,9 @@ topRated.addEventListener('click', event => {
   event.preventDefault();
   topRated.style.backgroundColor = "rgb(13, 37, 63)"
   topRated.style.color = 'rgb(30,213,169)'
-  topRated.classList.add("rounded-lg")
+  topRated.classList.add("rounded-2xl")
   topRated.classList.add("p-1")
+  onTV.classList.add("px-2")
 
   popular.style.backgroundColor = "white"
   popular.style.color = 'black'
