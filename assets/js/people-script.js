@@ -61,15 +61,15 @@ const displayPeople = (movies, id) => {
       if (details.style.display === 'none') {
         details.style.display = 'flex';
         box.style.display = 'flex';
-        box.style.backgroundImage = `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(${IMAGE_PATH + profile_path})`
-        box.style.backgroundSize = 'cover';
-        box.style.backgroundPosition = 'center';
+        // box.style.backgroundImage = `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(${IMAGE_PATH + profile_path})`
+        // box.style.backgroundSize = 'cover';
+        // box.style.backgroundPosition = 'center';
         details.innerHTML = `
-        <h3 class= "font-bold text-2xl mx-auto text-center pb-5" >${name}</h3>
+        <h3 class= "text-black font-bold text-2xl mx-auto text-center pb-5" >${name}</h3>
         <img src="${IMAGE_PATH + profile_path}" class="self-center object-cover object-center h-auto w-[200px]"/>
-        <div class= "mt-4 p-5 rounded-lg" style="background-color: rgba(0,0,0,0.5)">
-        <p class="font-bold text-xl">Overview</p>
-        ${overview}
+        <div class= "text-black mt-4 p-5 rounded-lg border-2" style="background-color: rgba(f,f,f)">
+        <p class="font-bold text-xl">Appearances in: ${type}</p>
+        ${known_for[0].overview}
         </div>
         `
       } else {
