@@ -67,7 +67,7 @@ const displayPeople = (movies, id) => {
         details.innerHTML = `
         <h3 class= "text-black font-bold text-2xl mx-auto text-center pb-5" >${name}</h3>
         <img src="${IMAGE_PATH + profile_path}" class="self-center object-cover object-center h-auto w-[200px]"/>
-        <div class= "text-black mt-4 p-5 rounded-lg border-2" style="background-color: rgba(f,f,f)">
+        <div class= "text-black mt-4 p-5 rounded-lg border-2" style="background-color: rgba(f,f,f);">
         <p class="font-bold text-xl">Appearances in: ${type}</p>
         ${known_for[0].overview}
         </div>
