@@ -70,5 +70,44 @@
         </div>
       </nav>
     </header>
+
+    <main>
+
+      <div id="box" class="hidden sm:h-auto md:left-[30%] sm:top-[100px] sm:w-[500px] fixed h-[120vh] w-auto bg-white border-2 left-[30px] top-[0] font-sans leading-6 p-7 rounded-md text-white z-20">
+        <i
+          class="fa-solid fa-xmark relative hover-action text-xl"
+          id="toggle"
+        ></i>
+        <section id="details" class="hidden flex-col">
+        
+        </section>
+      </div>
+      
+      <section class="sm:w-[80%] w-[100%] mx-auto pt-10">
+        <div class="pl-5 flex sm:flex-row flex-col gap-7 font-sans font-semibold">
+          <h1 class="text-3xl font-heading" id="category">Popular People</h1> 
+        </div>
+        
+        <article id="main" class="mt-7 flex gap-2 pl-5 flex-wrap">
+        </article>
+        
+      </section>
+      
+    </main>
+
+    <div>
+      <footer class="text-white font-heading text-lg mt-20" style="background-color: rgb(13, 37, 63);" >
+        <div class="p-4 text-center border-b border-gray-200">
+          <img src="./assets/images/logo-white.svg" alt="" class="min-w-[300px] mx-auto relative left-[30px]"/>
+          <ul class="text-center flex md:flex-row flex-col gap-10 justify-center">
+            <a href="./index.html"><li class="hover-action">Home</li></a>
+            <a href="./tv.html"><li class="hover-action">TV Shows</li></a>
+            <a href="./people.html"><li class="hover-action">People</li></a>
+          </ul>
+        </div>
+  
+        <p class="text-center p-5 text">&copy; 2023 Movie.PI inc.</p>
+      </footer>
+    </div>
   </body>
 </html>
